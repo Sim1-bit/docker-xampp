@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- 1. Titolo scheda:  Classe 5CM informatica -->    
-   <title>Registrazione sito</title>
-   <!-- 2. Generare la favicon della scuola ed inserirla nella scheda -->
-   <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 1. Titolo scheda:  Classe 5CM informatica -->    
+      <title>Registrazione sito</title>
+      <!-- 2. Generare la favicon della scuola ed inserirla nella scheda -->
+      <link rel="icon" type="image/x-icon" href="img/favicon.svg">
     
-   <!-- CSS impostazioni per la tabella Foglio di stile incorporato --> 
-   <link rel="stylesheet" href="mystyle.css">
+      <!-- CSS impostazioni per la tabella Foglio di stile incorporato --> 
+      <link rel="stylesheet" href="css/mystyle.css">
 
-   <style type="text/css">
-
+      <style type="text/css">
          #titolo
          {
             text-align: center;
@@ -25,38 +25,38 @@
             text-decoration-line: overline underline;
             text-decoration-color: blue;
          }
-   </style>
+      </style>
 
 
-</head>
-<body>  
-    <header>
-        <h1 id = "titolo"><br>IIS Marconi Pieralisi<br></h1>
-        <nav>
-           <!-- 5. Elenco puntato: elenco delle materie curriculari -->
-           <ul>
-              <li><a href ="">Informatica</a></li>
-              <li><a href ="">Sistemi e rete</a></li>
-              <li><a href ="">Tpsit</a></li>
-              <li><a href ="">Italiano</a></li>
-              <li><a href ="">Matematica</a></li>
-              <li><a href ="">Inglese</a></li>
-              <li><a href ="">Scienze Motorie</a></li>
-              <li><a href ="">Storia</a></li>
-              <li><a href ="">GPOI</a></li>
-              <li><a href ="">Religione</a></li>
-              <li><a href ="scout.html">Scout</a></li>
-           </ul>
-        </nav>
-     </header>
+   </head>
+
+   <body> 
+      <header>
+         <h1 id = "titolo"><br>IIS Marconi Pieralisi</h1><br>
+         <nav>
+            <!-- 5. Elenco puntato: elenco delle materie curriculari -->
+            <ul>
+               <li><a href ="">Informatica</a></li>
+               <li><a href ="">Sistemi e rete</a></li>
+               <li><a href ="">Tpsit</a></li>
+               <li><a href ="">Italiano</a></li>
+               <li><a href ="">Matematica</a></li>
+               <li><a href ="">Inglese</a></li>
+               <li><a href ="">Scienze Motorie</a></li>
+               <li><a href ="">Storia</a></li>
+               <li><a href ="">GPOI</a></li>
+               <li><a href ="">Religione</a></li>
+               <li><a href ="scout.html">Scout</a></li>
+            </ul>
+         </nav>
+      </header>
     
 
-     <section>
+      <section>
          <br>
-            <h1 id = "regScout">Registraztione Scout</h1><p>&nbsp;&nbsp;</p>
+         <h1 id = "regScout">Registraztione Scout</h1><p>&nbsp;&nbsp;</p>
          <br>
-         <form name = "registrazione" method = "post" action = "test_view_request.php" >
-
+         <form name = "registrazione" method = "post" action = "view_request.php" >
             <label for = "userName">&nbsp;Nome: <br></label>
             <input type = "text" id="userName" name = "userName" value = "">
             <br>
@@ -82,16 +82,16 @@
             <label for = "Man">Uomo<br></label>
             <input type = "radio" id="Woman" name = "userGender" value = "Donna">
             <label for = "Woman">Donna</label>
-            <br>
-            
+            <br>      
+
             <br>
             <label for="userCity">Città di residenza</label>
             <select id="userCity" name="userCity" required>
-                <option value="">Seleziona...</option>
-                <option value="Ancona">Ancona</option>
-                <option value="Roma">Roma</option>
-                <option value="Milano">Milano</option>
-                <option value="Napoli">Napoli</option>
+               <option value="">Seleziona...</option>
+               <option value="Ancona">Ancona</option>
+               <option value="Roma">Roma</option>
+               <option value="Milano">Milano</option>
+               <option value="Napoli">Napoli</option>
             </select>
             <br>
 
@@ -104,13 +104,11 @@
             <br>
             <input type = "submit" value = "Invio">
 
-        </form>
+         </form>
 
-        <p id = "dati">
-            
-        </p>
+         <p id = "dati"> </p>
 
-        <script>
+         <script>
             //Cattura i valori con gli id
             function stampadati()
             {
@@ -122,7 +120,7 @@
                var citta = document.getElementById("userCity");
                var data = document.getElementById("userDate");
 
-                //var aux = document.getElementById("dati").textContent = nome.nodeValue + "\n" + cognome.nodeValue + "\n" + email.nodeValue + "\n" + password.nodeValue + "\n" + data.nodeValue;
+               //var aux = document.getElementById("dati").textContent = nome.nodeValue + "\n" + cognome.nodeValue + "\n" + email.nodeValue + "\n" + password.nodeValue + "\n" + data.nodeValue;
                console.log(nome.nodeValue + "\n" + cognome.nodeValue + "\n" + email.nodeValue + "\n" + password.nodeValue + "\n" + sesso.nodeValue + "\n" + citta.nodeValue + "\n" + data.nodeValue);
                if (nome == null || cognome  === null ||  email  === null || password === null || sesso === null || citta === null || data === null)
                {
@@ -131,8 +129,9 @@
             }
 
             
-        </script>
-     </section>
+         </script>
+      </section>
 
-</body>
+   </body>
+
 </html>
