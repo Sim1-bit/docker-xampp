@@ -12,5 +12,5 @@
     {
         die("aaa".$connection->connect_error);
     }
-    echo "Connessione al database avvenuta con successo!<br>";
+    //echo "Connessione al database avvenuta con successo!<br>";
     //$connection->close();
