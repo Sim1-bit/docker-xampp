@@ -1,14 +1,11 @@
 <?php
-    //phpinfo();
+
 ?>
 
 <html>
 
-    <a href ="sign_up_request.html">Registrazione</a>
+    <a href ="access/sign_up.html">Registrazione</a>
     <br>
-    <a href ="test_view_table.php">Vista Tabelle</a>
-    <br>
-    <a href ="chat_room/index.php">Esercizio Chat Room</a>
-    <br>
+    <a href ="access/login.html">Accedi</a>
 
 </html>

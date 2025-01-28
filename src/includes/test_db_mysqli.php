@@ -1,7 +1,7 @@
 <?php
 
     $host = 'db';
-    $dbname = "root_db";
+    $dbname = "chat_room";
     $user = "user";
     $password = "user";
     $port = 3306;
@@ -12,5 +12,5 @@
     {
         die("aaa".$connection->connect_error);
     }
-    echo "Connessione al database avvenuta con successo!";
+    //echo "Connessione al database avvenuta con successo!<br>";
     //$connection->close();
