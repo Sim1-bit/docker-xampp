@@ -29,6 +29,12 @@
             <?= $listItems; ?>
         </form>
 
+        <form name = "create_room" method = "post" action = "create_room.php">
+            <label for = "name"> Nome:</label>
+            <input name = "name" placeholder="Nome..." required></input>
+            <br>
+            <input type = "submit" value = "Invia">
+        </form>
     </body>
 
 </html>

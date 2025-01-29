@@ -9,7 +9,7 @@
 
     $table = "users";
 
-    if (count($_POST) === 1 && isset($_POST['message']))
+    if (count($_POST) === 2 && isset($_POST['message']) && isset($_POST['room']))
     {
         $query = 
         "INSERT INTO messages 
@@ -19,7 +19,7 @@
             ID_room, 
             ID_user
         )
-        SELECT '$_POST[message]', NOW(), '$_SESSION[room]', u.ID_user 
+        SELECT '$_POST[message]', NOW(), '$_POST[room]', u.ID_user 
         FROM users u 
             WHERE u.username = '$_SESSION[username]';";
         $result = $connection->query($query);
@@ -30,7 +30,7 @@
         }
         else
         {
-            header("Location: room.php");
+            header("Location: room.php?room=$_POST[room]");
         }
     }
     else
