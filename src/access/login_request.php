@@ -20,13 +20,20 @@
         }
         else
         {
-            $_SESSION['username'] = $_POST['username'];
-            $_SESSION['password'] = $_POST['userPassword'];
+            if($result -> num_rows > 0)
+            {
+                $_SESSION['username'] = $_POST['username'];
+                $_SESSION['password'] = $_POST['userPassword'];
 
-            header("Location: ../rooms/view_rooms.php");
+                header("Location: ../rooms/view_rooms.php");       
+            }
+            else
+            {
+                header("Location: login.html");
+            } 
         }
     }
     else
     {
-        die("");
+        header("Location: login.html");
     }
