@@ -16,9 +16,35 @@
     $_SESSION['room'] = $_GET['room'];
 ?>
 
-<html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><?php echo $_GET['room'] ?></title>
 
+        <link rel="stylesheet" href="../css/mystyle.css">
+        <style type="text/css">
+
+            #title
+            {
+               text-align: center;
+               text-decoration-line: overline underline;
+               text-decoration-color: rgb(176, 2, 2);
+            }
+
+        </style>
+
+        <link rel="icon" type="image/x-icon" href="../imgs/logo.png">
+        
+    </head>
     <body>
+        <header>
+            <br>
+                <img src="../imgs/logo.png" alt="Logo Dialectic" width="100">
+                <h1 id = "title">Dialectic</h1>
+            <br>
+        </header>
+        <br>
         <table>
             <tr>
                 <th>Sender</th>

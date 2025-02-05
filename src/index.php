@@ -1,5 +1,5 @@
 <?php
-
+    header("Location: access/login.html");
 ?>
 
 <html>

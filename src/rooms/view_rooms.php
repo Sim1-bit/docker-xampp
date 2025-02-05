@@ -21,15 +21,41 @@
 
 ?>
 
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rooms</title>
 
-<html>
+        <link rel="stylesheet" href="../css/mystyle.css">
+        <style type="text/css">
 
+            #title
+            {
+               text-align: center;
+               text-decoration-line: overline underline;
+               text-decoration-color: rgb(176, 2, 2);
+            }
+        </style>
+
+        <link rel="icon" type="image/x-icon" href="../imgs/logo.png">
+        
+    </head>
     <body>
-        <form name = "tabelle" method = "get" action = "room.php">
+        <header>
+            <br>
+                <img src="../imgs/logo.png" alt="Logo Dialectic" width="100">
+                <h1 id = "title">Dialectic</h1>
+            <br>
+        </header>
+        <br>
+        <form class = "access" name = "tabelle" method = "get" action = "room.php">
+            <label>Stanze Disponibili</label><br>
             <?= $listItems; ?>
         </form>
 
-        <form name = "create_room" method = "post" action = "create_room.php">
+        <form class = "access" name = "create_room" method = "post" action = "create_room.php">
+            <label>Crea Stanza</label><br>
             <label for = "name"> Nome:</label>
             <input name = "name" placeholder="Nome..." required></input>
             <br>
