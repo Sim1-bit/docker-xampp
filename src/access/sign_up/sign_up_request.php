@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once "../includes/test_db_mysqli.php";
+    require_once "../../includes/db_mysqli.php";
 
     if ($_SERVER["REQUEST_METHOD"] != "POST")
     {
@@ -9,7 +9,7 @@
 
     $table = "users";
 
-    if (!(isset($_POST['userMail']) && isset($_POST['userPassword']) && $_POST['username'] && $_POST['userDate']))
+    if (!(isset($_POST['userMail']) && isset($_POST['userPassword']) && $_POST['username']))
     {
         header("Location: sign_up.html");   
     }
@@ -31,17 +31,15 @@
     $query = 
         "INSERT INTO users
         (
-            email,
-            password,
             username,
-            birth_date
+            email,
+            password
         )
         VALUES
         (
-            '$_POST[userMail]',
-            '$_POST[userPassword]',
             '$_POST[username]',
-            '$_POST[userDate]'
+            '$_POST[userMail]',
+            '$_POST[userPassword]'
         )";
     $result = $connection->query($query);
     
@@ -53,7 +51,7 @@
     {
         $_SESSION['username'] = $_POST['username'];
         $_SESSION['password'] = $_POST['userPassword'];
-        header("Location: ../rooms/view_rooms.php");
+        header("Location: ");
     }
     
 

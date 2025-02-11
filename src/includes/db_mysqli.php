@@ -1,7 +1,7 @@
 <?php
 
     $host = 'db';
-    $dbname = "chat_room";
+    $dbname = "link_shortener";
     $user = "user";
     $password = "user";
     $port = 3306;
