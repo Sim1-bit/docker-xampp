@@ -9,7 +9,7 @@ chmod 777 ./mariadb_run
 
 # Riavvia i container in background
 docker-compose down || true
-docker-compose up --build -d
+MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose up --build -d
 
 # Aspetta che il container di MariaDB sia pronto
 echo "Waiting for MariaDB to be ready..."

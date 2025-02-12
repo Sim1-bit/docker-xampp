@@ -25,7 +25,7 @@
                 $_SESSION['username'] = $_POST['username'];
                 $_SESSION['password'] = $_POST['userPassword'];
 
-                header("Location: ");       
+                header("Location: ../../website/view_links.php");       
             }
             else
             {

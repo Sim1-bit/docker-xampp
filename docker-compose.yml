@@ -36,6 +36,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./src:/var/www/html
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
     depends_on:
       - db
       - phpmyadmin
@@ -43,3 +45,4 @@ services:
       - "3000:80"
     expose:
       - "3000"
+    user: ${MY_UID}:${MY_GID}
