@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once "../includes/test_db_mysqli.php";
-
+    //
     if ($_SERVER["REQUEST_METHOD"] != "POST")
     {
         die("");
