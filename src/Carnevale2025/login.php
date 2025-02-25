@@ -1,6 +1,5 @@
 <?php
     session_start();
-    header("Location: Carnevale2025/login.php");
 ?>
 <?php
     require_once "db.php";
@@ -26,7 +25,7 @@
 
     <body>
 
-        <form action = "index.php" method = "post">
+        <form action = "login.php" method = "post">
             Codice fiscale: <input type = "text" name = "codF" value = ""><br>
             Data Nascita: <input type = "date" name = "data" value = ""><br>
             <input type = "submit" value = "Accedi">
