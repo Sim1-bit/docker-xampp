@@ -1,11 +1,8 @@
 <?php
-    header("Location: access/login/login.html");
+    include "includes/import.php";
+    stampa("includes/html/index.html");
+
 ?>
-
 <html>
-
-    <a href ="access/sign_up/sign_up.html">Registrazione</a>
-    <br>
-    <a href ="access/login/login.html">Accedi</a>
-
+    <title>My WebIO - Home</title>
 </html>
