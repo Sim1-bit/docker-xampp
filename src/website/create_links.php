@@ -24,6 +24,7 @@
         $query = 
         "INSERT INTO links 
         (
+            ID_link,
             ID_user, 
             link_long, 
             link_short, 
@@ -31,6 +32,7 @@
         )
         VALUES
         (
+            '$link',
             '$row[ID_user]',
             '$_POST[link]',
             '$url',
@@ -47,7 +49,7 @@
 '<?php
     require_once "../../includes/db_mysqli.php";
     
-    $query = "SELECT link_long FROM links WHERE ID_link =' . $link . '";
+    $query = "SELECT link_long FROM links WHERE ID_link =\'' . $link . '\'";
     $result = $connection->query($query);
 
     if(!$result)
