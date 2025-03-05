@@ -28,3 +28,38 @@ Questo script:
 ### 3. **File di configurazione `Docker`**
 - `docker-compose.yml` è stato adattato per consentire l'avvio di MariaDB ed evitare problemi di permessi su NixOS (cartella `mariadb_run`)
 - `Dockefile` è stato modificato per installare il gestore pacchetti di PHP (composer)
+
+
+
+
+
+
+
+
+### 4- **Comandi mySQL**
+
+CREATE TABLE users
+(
+    ID_user int PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) not null,
+    email VARCHAR(50) not null,
+    password VARCHAR(64) not null
+);
+
+
+
+CREATE TABLE links
+(
+    ID_link int PRIMARY KEY AUTO_INCREMENT,
+    ID_user int,
+    link_long varchar(5000) not null,
+    link_short varchar(500) not null,
+    description varchar(500),
+    interaction int DEFAULT 0,
+    
+    FOREIGN KEY (ID_user) REFERENCES users(ID_user)
+    	ON DELETE RESTRICT
+    	ON UPDATE CASCADE
+);
+
+

@@ -1,7 +1,7 @@
 <?php
     require_once "../../includes/db_mysqli.php";
     
-    $query = "SELECT link_long FROM links WHERE ID_link =24";
+    $query = "SELECT link_long FROM links WHERE ID_link =106c6cea040a99661a19c43bbf94d1c2";
     $result = $connection->query($query);
 
     if(!$result)

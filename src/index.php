@@ -1,11 +1,11 @@
 <?php
-    header("Location: access/login/login.html");
+    header("Location: login.php");
 ?>
 
 <html>
 
-    <a href ="access/sign_up/sign_up.html">Registrazione</a>
+    <a href ="sign_up.php">Registrazione</a>
     <br>
-    <a href ="access/login/login.html">Accedi</a>
+    <a href ="login.php">Accedi</a>
 
 </html>
