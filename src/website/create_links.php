@@ -48,6 +48,9 @@
         $content = 
 '<?php
     require_once "../../includes/db_mysqli.php";
+
+    $query = "UPDATE links SET links.interaction = links.interaction + 1 WHERE links.ID_link =\'' . $link . '\'";
+    $result = $connection->query($query);
     
     $query = "SELECT link_long FROM links WHERE ID_link =\'' . $link . '\'";
     $result = $connection->query($query);
@@ -68,6 +71,7 @@
     } 
 ?>';
         file_put_contents(__DIR__."/links/$link", $content);
+        header("Location: view_links.php");
     }
     else
     {

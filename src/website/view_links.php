@@ -36,6 +36,7 @@
                 <th>Long Link</th>
                 <th>Short Link</th>
                 <th>Description</th>
+                <th>Interaction</th>
             </tr>
             <?php include 'load_links.php'; // File che carica i messaggi ?>
         </table>
