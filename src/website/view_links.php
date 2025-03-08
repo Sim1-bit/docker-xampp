@@ -47,6 +47,10 @@
             <br>
             <textarea name = "link" placeholder="Scrivi un link..." required></textarea>
             <br>
+            <label for = "link">Description:</label>
+            <br>
+            <textarea name = "description" placeholder="Scrivi una descrizione..." value = " " required></textarea>
+            <br>
             <input type = "submit" value = "Invia">
         </form>
     </body>

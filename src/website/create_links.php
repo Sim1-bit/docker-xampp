@@ -9,7 +9,7 @@
 
     $table = "users";
 
-    if (count($_POST) === 1 && isset($_POST['link']))
+    if ((count($_POST) === 1 || count($_POST) === 2) && isset($_POST['link']))
     {    
         $link = md5($_POST['link']);
 
@@ -27,16 +27,16 @@
             ID_link,
             ID_user, 
             link_long, 
-            link_short, 
-            interaction
+            link_short,
+            description
         )
         VALUES
         (
             '$link',
             '$row[ID_user]',
-            '$_POST[link]',
+            '$_POST[link]',   
             '$url',
-            0
+            '$_POST[description]'
         )";
 
         $result = $connection->query($query);
