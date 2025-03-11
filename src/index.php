@@ -1,7 +1,3 @@
-<?php
-    header("Location: login.php");
-?>
-
 <html>
 
     <a href ="sign_up.php">Registrazione</a>

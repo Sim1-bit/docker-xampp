@@ -44,26 +44,11 @@
         <title>Login</title>
 
         <link rel="stylesheet" href="../css/mystyle.css">
-
-        <style type="text/css">
-
-            #title
-            {
-               text-align: center;
-               text-decoration-line: overline underline;
-               text-decoration-color: rgb(176, 2, 2);
-            }
-            
-        </style>
-
-        <link rel="icon" type="image/x-icon" href="../imgs/logo.png">
-        
     </head>
     <body>
         <header>
             <br>
-                <img src="../imgs/logo.png" alt="Logo Dialectic" width="100">
-                <h1 id = "title">Dialectic</h1>
+                <h1 id = "title">Byte.ly</h1>
             <br>
         </header>
         <br>

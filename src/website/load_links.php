@@ -1,5 +1,4 @@
 <?php
-    //session_start();
     require_once "../includes/db_mysqli.php";
 
     $query = "SELECT l.link_long, l.link_short, l.description, l.interaction FROM links l NATURAL JOIN users u WHERE u.username = '$_SESSION[username]'";
