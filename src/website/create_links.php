@@ -41,11 +41,18 @@
             '$_POST[description]'
         )";
 
-        $result = $connection->query($query);
+        try 
+        {
+            $result = $connection->query($query);
+        } 
+        catch (Exception $e) 
+        {
+            header("Location: website/view_links.php");
+        }
     
         if(!$result)
         {
-            die("Database query failed: " . $connection->error);
+            header("Location: website/view_links.php");
         }
         $content = 
 '<?php

@@ -42,13 +42,14 @@
         
         if(!$result)
         {
-            die("Database query failed: " . $connection->error);
+            header("Location: sign_up.php");
         }
         else
         {
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['password'] = $_POST['userPassword'];
-            header("Location: ");
+
+            header("Location: website/view_links.php"); 
         }
     }
 ?>

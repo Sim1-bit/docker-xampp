@@ -13,7 +13,7 @@
         
             if(!$result)
             {
-                die("Database query failed: " . $connection->error);
+                header("Location: login.php");
             }
             else
             {
