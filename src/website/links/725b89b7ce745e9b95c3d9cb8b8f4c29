@@ -1,10 +1,10 @@
 <?php
     require_once "../../includes/db_mysqli.php";
 
-    $query = "UPDATE links SET links.interaction = links.interaction + 1 WHERE links.ID_link ='d9da49789ed2cd0935e76a08fdc0319f'";
+    $query = "UPDATE links SET links.interaction = links.interaction + 1 WHERE links.ID_link ='725b89b7ce745e9b95c3d9cb8b8f4c29'";
     $result = $connection->query($query);
     
-    $query = "SELECT link_long FROM links WHERE ID_link ='d9da49789ed2cd0935e76a08fdc0319f'";
+    $query = "SELECT link_long FROM links WHERE ID_link ='725b89b7ce745e9b95c3d9cb8b8f4c29'";
     $result = $connection->query($query);
 
     if(!$result)

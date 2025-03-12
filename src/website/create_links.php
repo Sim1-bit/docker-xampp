@@ -18,6 +18,8 @@
         $result = $connection->query($query);
         $row = $result->fetch_assoc();
 
+        $link = md5($_POST['link'].$row['ID_user']);
+
         //utilizza il link per generare il short
         $url = "https://3000-idx-link-shortener-1739258623922.cluster-4ezwrnmkojawstf2k7vqy36oe6.cloudworkstations.dev/website/links/$link";
 
