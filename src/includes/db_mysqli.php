@@ -1,7 +1,7 @@
 <?php
 
     $host = 'db';
-    $dbname = "link_shortener";
+    $dbname = "exchange";
     $user = "user";
     $password = "user";
     $port = 3306;
